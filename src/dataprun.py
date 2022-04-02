@@ -313,7 +313,7 @@ def GenerateWL(LogLists,kd=1,ka=1,kc=1,kip=1,ShowTime=True):
     
     """
 
-    
+    print("Inside dataprune")
     st = datetime.now()
     RL,DD,CD,IPD,TCalls = ReadInLogs(LogLists)
     et = datetime.now()
