@@ -21,7 +21,7 @@ def getDomainResolveIpCSR(domain2ip: dict,
   Return:
   csr matrix representing the domain to ip mapping
   """
-
+  print("inside getDomainResolveIPCSR")
   domainMatrixSize = max(domain2index.values()) + 1
   logging.info("Number of domains (possible): " + str(domainMatrixSize))
   ipMatrixSize = max(ip2index.values()) + 1
@@ -61,8 +61,8 @@ def main():
 
   # Create sparse matrix of domain to IP relations
   getDomainResolveIpCSR(domain2ip, domain2index, ip2index)
-  #mymatrix = getDomainResolveIpCSR(domain2ip, domain2index, ip2index)
-  #print(mymatrix)
+  mymatrix = getDomainResolveIpCSR(domain2ip, domain2index, ip2index)
+  print(mymatrix)
 
 if __name__ == '__main__':
     main()
